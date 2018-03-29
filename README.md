@@ -14,7 +14,7 @@ if RealmClient.write(money) == true {
 
 
 2. 읽기
-```
+```swift
 if let objects = RealmClient.find(Money.self) {
     for object in objects {
         print(object)
