@@ -22,4 +22,12 @@ if let objects = RealmClient.find(Money.self) {
 }
 ```
 
+3. 제거
+
+```swift
+if RealmClient.del(object) == true {
+    print("성공적으로 지움.")
+}
+```
+
 do try catch 떡칠은 RealmClient 에 해놔서 밖에서는 그냥 쓰면된다.
