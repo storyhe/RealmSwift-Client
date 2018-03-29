@@ -12,7 +12,7 @@ import Realm
 
 open class RealmClient {
     
-    static var db:Realm? {
+    private static var db:Realm? {
         
         // 참고 url ; https://realm.io/kr/docs/swift/latest/#migrations
         var config = Realm.Configuration(
@@ -56,6 +56,13 @@ open class RealmClient {
         return self.db?.objects(object)
     }
     
-
+    static func del(_ object:Object) -> Bool {
+        do {
+            try self.db?.write { self.db?.delete(object) }
+            return true
+        } catch {
+            return false
+        }
+    }
     
 }

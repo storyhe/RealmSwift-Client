@@ -33,6 +33,9 @@ class FirstViewController: UIViewController {
         if let objects = RealmClient.find(Money.self) {
             for object in objects {
                 print(object)
+                if RealmClient.del(object) == true {
+                    print("성공적으로 지움.")
+                }
             }
         }
         
