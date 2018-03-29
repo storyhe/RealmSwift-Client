@@ -1,5 +1,18 @@
 # RealmSwift-Client
 
+샘플 Model
+
+```swift
+class Money: Object {
+    @objc dynamic var name:String = ""
+    @objc dynamic var price:Int = 0
+    @objc dynamic var time:Date = Date()
+}
+```
+
+---
+
+
 Realm 을 써보자 의견 나와서 테스트용으로 만듬.
 왠지 모르겟지만 Realm 불러와서 pool 만들어놓고 쓸려니까 안되길래 구조 변경
 
